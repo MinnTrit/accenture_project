@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currents scheduled tasks</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Redbeat tasks' ids</th>
+                <th>Launcher</th>
+                <th>Interval</th>
+                <th>Frequencies</th>
+                <th>Latest task status</th>
+                <th>Next scheduled jobs</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for key in keys %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ key[0].decode('utf-8').split('@')[0] }}</td>
+                <td>{{ key[0].decode('utf-8').split('@')[1] }}</td>
+                <td>{{ key[0].decode('utf-8').split('@')[2].split('-')[0] }}
+                <td>{{ key[0].decode('utf-8').split('@')[2].split('-')[1] }}
+                <!-- Get the latest task status -->
+                <td>{{ key[0].decode('utf-8').split('@')[0].split('redbeat:laz-task-')[1] | taskstatus}}</td>
+                <td>{{ key[1] | int | datetimeformat }}</td> 
+                <td>
+                    <form method="POST">
+                        <button type="submit" value="{{ key[0].decode('utf-8') }}"
+                        name="deleteTask">Delete task</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

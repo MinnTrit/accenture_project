@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Input Jobs' parameters</title>
+        </head>
+        <body>
+            <h2>Input parrameters</h2>
+            <form id="inputForm" method="POST">
+
+                <div id="launcherContainer">
+                    <label for="launcher">Input your name</label>
+                    <input type="text" placeholder="Input your name" name="launcher">
+                </div>
+
+                <div id="timeContainer">
+                    <label for="timeInterval">Select the time Interval</label>
+                    <select name="timeInterval" id="timeInterval">
+                        <option value="10">10</option>
+                        <option value="30">30</option>
+                        <option value="60">60</option>
+                    </select>
+                    <label for="timeQuantifier">Select the time interval quantifier</label>
+                    <select name="timeQuantifier" id="timeQuantifier">
+                        <option value="Seconds">Seconds</option>
+                        <option value="Minutes">Minutes</option>
+                        <option value="Hours">Hours</option>
+                    </select>
+                </div>
+
+                <div id="inputContainer">
+                    <input type="text" placeholder="Enter country list" name="countryList">
+                    <input type="text" placeholder="Enter raw cookies" name="cookiesString">
+                </div>
+
+                <button type="button" id="addButton">Add More Inputs</button>
+                <button type="submit">Submit</button>
+                <button type="button" id="removeButton">Remove inputs</button>
+
+            </form>
+
+            <h2>Delete scheduled tasks</h2>
+            <a href="{{ url_for('delete_task') }}">View tasks list</a>
+
+            <script>
+                document.getElementById('addButton').addEventListener('click', function () {
+                    const container = document.getElementById('inputContainer');
+
+                    // Create new input for list item
+                    const listInput = document.createElement('input');
+                    listInput.type = 'text';
+                    listInput.placeholder = 'Enter country list';
+                    listInput.name = 'countryList';
+
+                    // Create new input for string input
+                    const stringInput = document.createElement('input');
+                    stringInput.type = 'text';
+                    stringInput.placeholder = 'Enter raw cookies';
+                    stringInput.name = 'cookiesString';
+
+                    // Add the inputs to the container
+                    container.appendChild(listInput);
+                    container.appendChild(stringInput);
+                });
+            </script>
+
+            <script>
+                document.getElementById("removeButton").addEventListener("click", function(){
+                    const container = document.getElementById("inputContainer")
+                    const inputs = container.getElementsByTagName("input")
+                    if (inputs.length > 2) {
+                        container.removeChild(inputs[inputs.length - 1])
+                        container.removeChild(inputs[inputs.length - 2])
+                    }
+                    else {
+                        let message = document.createElement("p")
+                        message.style.color = "red"
+                        message.textContent = "Can't remove further any inputs."
+                        container.appendChild(message)
+                        setTimeout(() => {
+                            container.removeChild(message);
+                        }, 3000);
+                    }
+                })
+            </script>
+        </body>
+        </html>
