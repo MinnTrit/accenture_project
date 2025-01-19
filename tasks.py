@@ -16,7 +16,7 @@ upload_folder = 'uploads'
 app.config['UPLOAD_FOLDER'] = upload_folder
 app.secret_key = 'supersecretkey'
 celery = make_celery(app)
-@celery.task
+@celery.task(queue='accenture')
 def main_task(jobs_details):
     #Initialize the datalake client
     datalake_client = Minio_client('datalake')
