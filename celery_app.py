@@ -18,7 +18,7 @@ def index():
         input_raw_cookies = request.form.getlist('cookiesString')
         input_interval = request.form.get("timeInterval")
         input_time_quantifier = request.form.get("timeQuantifier")
-        cleaning_option = bool(request.form.get('cleaningOption'))
+        cleaning_option = request.form.get('cleaningOption')
         launcher = request.form.get('launcher')
         for raw_country_list in input_countries_list: 
             country_list = [country.strip() for country in raw_country_list.split(",")]
