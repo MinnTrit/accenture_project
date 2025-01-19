@@ -36,6 +36,11 @@
                 </td>
             </tr>
             {% endfor %}
+            <div>
+                <form method="GET" action="{{ url_for('index') }}">
+                    <button type="submit">Back to home page</button>
+                </form>
+            </div>
         </tbody>
     </table>
 </body>
