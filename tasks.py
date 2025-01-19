@@ -23,7 +23,7 @@ def main_task(jobs_details):
 
     #Initialize the google api client
     google_client = Pusher(
-        credential_path="googleauth.json",
+        credential_path="/home/ubuntu/googleauth.json",
         voucher_spreadsheet="Testing",
         product_spreadsheet="Testing",
         voucher_worksheet="Voucher Analysis",
