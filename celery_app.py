@@ -37,7 +37,7 @@ def index():
         task = main_task.delay(jobs_details, cleaning_option)
         task_id = task.id
         entry = RedBeatSchedulerEntry(
-            f'laz-task-{task_id}@{launcher}@{input_interval}-{input_time_quantifier}',
+            f'laz-task-{task_id}@{launcher}@{input_interval}-{input_time_quantifier}@{result_countries_list}',
             'tasks.main_task',
             interval,
             kwargs={
