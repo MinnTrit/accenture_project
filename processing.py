@@ -18,7 +18,7 @@ class Processor:
         self.country_list = jobs_details.get('country_list')
         self.clean_cookies_list = self.get_clean_cookies(jobs_details.get('cookies_list'))
         self.domain_map = self.get_domain()
-        self.folder_name = f'uploads/{Processor.current_time}'
+        self.folder_name = os.path.join('uploads', Processor.current_time)
         self.datalake_client = datalake_client
         self.google_client = google_client
 
