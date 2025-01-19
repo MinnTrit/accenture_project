@@ -18,6 +18,7 @@ def index():
         input_raw_cookies = request.form.getlist('cookiesString')
         input_interval = request.form.get("timeInterval")
         input_time_quantifier = request.form.get("timeQuantifier")
+        cleaning_option = bool(request.form.get('cleaningOption'))
         launcher = request.form.get('launcher')
         for raw_country_list in input_countries_list: 
             country_list = [country.strip() for country in raw_country_list.split(",")]
@@ -33,13 +34,16 @@ def index():
             interval = timedelta(minutes=int(input_interval))
         else:
             interval = timedelta(seconds=int(input_interval))
-        task = main_task.delay(jobs_details)
+        task = main_task.delay(jobs_details, cleaning_option)
         task_id = task.id
         entry = RedBeatSchedulerEntry(
             f'laz-task-{task_id}@{launcher}@{input_interval}-{input_time_quantifier}',
             'tasks.main_task',
             interval,
-            kwargs={"jobs_details":jobs_details},
+            kwargs={
+                "jobs_details":jobs_details,
+                "cleaning_option": cleaning_option
+                },
             app=celery
         )
         entry.save()

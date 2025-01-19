@@ -17,7 +17,7 @@ app.config['UPLOAD_FOLDER'] = upload_folder
 app.secret_key = 'supersecretkey'
 celery = make_celery(app)
 @celery.task(queue='accenture')
-def main_task(jobs_details):
+def main_task(jobs_details, cleaning_option):
     #Initialize the datalake client
     datalake_client = Minio_client('datalake')
 
@@ -28,7 +28,7 @@ def main_task(jobs_details):
         product_spreadsheet="Testing",
         voucher_worksheet="Voucher Analysis",
         product_worksheet="Product Analysis",
-        clear_option=True    
+        clear_option=cleaning_option
     )
 
     #Initialize the processor
