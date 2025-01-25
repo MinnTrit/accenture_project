@@ -8,6 +8,7 @@ import time
 import io
 import os
 import json
+import pytz
 
 class Processor:
     current_time = datetime.now().strftime('%d%b%H%M')
@@ -18,6 +19,7 @@ class Processor:
         self.country_list = jobs_details.get('country_list')
         self.clean_cookies_list = self.get_clean_cookies(jobs_details.get('cookies_list'))
         self.domain_map = self.get_domain()
+        self.gmt_map = self.get_gmt()
         self.folder_name = os.path.join('uploads', Processor.current_time)
         self.datalake_client = datalake_client
         self.google_client = google_client
@@ -38,6 +40,17 @@ class Processor:
         "TH": "https://sellercenter.lazada.co.th"
         }
         return domain_map
+    
+    def get_gmt(self):
+        gmt_map = {
+            "VN": pytz.timezone("Asia/Ho_Chi_Minh"), #GMT+7
+            "TH": pytz.timezone("Asia/Ho_Chi_Minh"), #GMT+7
+            "ID": pytz.timezone("Asia/Ho_Chi_Minh"), #GMT+7
+            "MY": pytz.timezone("Asia/Kuala_Lumpur"), #GMT+8
+            "PH": pytz.timezone("Asia/Kuala_Lumpur"), #GMT+8
+            "SG": pytz.timezone("Asia/Kuala_Lumpur") #GMT+8
+        }
+        return gmt_map
     
     def get_clean_cookies(self, raw_cookies):
         result_list = []
@@ -65,7 +78,8 @@ class Processor:
         master_list = []
         for country in country_list:
             print(f'Processing country {country}')
-            domain_url = self.domain_map.get(country)
+            domain_url = self.domain_map.get(country, "")
+            country_gmt = self.gmt_map.get(country, "")
             seller_url = f'{domain_url}/ba/sycm/faas/dataWar/seller/info.json'
             matching_pattern = r'\w+\.\w+(?:\.co|\.com)?\.(\w+).*'
             seller_response = requests.request("POST", seller_url, cookies=input_cookies)
@@ -88,9 +102,7 @@ class Processor:
                         print(f'Made request to {request_string} for seller {seller_used_id}')
                         return_data = response.json()
                         voucher_items = return_data.get('data', '').get('data').get('data')
-                        collected_time_stamp_ms = return_data.get('data').get('timestamp')
-                        collected_time_stamp_s = collected_time_stamp_ms / 1000
-                        collected_datetime_obj = datetime.fromtimestamp(collected_time_stamp_s)
+                        collected_datetime_obj = datetime.now(country_gmt)
                         time_collected = collected_datetime_obj.strftime('%Y-%m-%d %H:%M:%S')
                         if len(voucher_items) > 0:
                             for voucher_item in voucher_items:
@@ -205,7 +217,8 @@ class Processor:
             retries = 5
             while current_retry < retries:
                 try:
-                    domain_url = self.domain_map.get(country, '')
+                    domain_url = self.domain_map.get(country, "")
+                    country_gmt = self.gmt_map.get(country, "")
                     print(f'Processing country {country}')
                     result_list = []
                     product_url = f'{domain_url}/ba/sycm/lazada/faas/product/rank/realtime/itemV2?page=1&pageSize=100&order=desc&orderBy=realtimeProductIpvUv&device=1&indexCode=realtimeProductIpvUv&dashboard=false'
@@ -217,7 +230,8 @@ class Processor:
                     seller_used_id = '.'.join([str(country),str("LAZ"), str(seller_id)])
                     product_path = self.convert_to_json_product(product_json, product_directory, seller_used_id)
                     self.datalake_client.to_datalake(product_path)
-                    time_collected = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                    collected_datetime_obj = datetime.now(country_gmt)
+                    time_collected = collected_datetime_obj.strftime('%Y-%m-%d %H:%M:%S')
                     for data in product_json.get('data').get('data'):
                         #Get the dimensions
                         spu_marketplace = data.get('itemId').get('value')

@@ -1,0 +1,1636 @@
+{
+    "code": 0,
+    "data": {
+        "data": [
+            {
+                "link": {
+                    "value": "https://www.lazada.vn/products/i2028836862.html?urlFlag=true"
+                },
+                "realtimeProductUnitsSold": {
+                    "value": 0
+                },
+                "realtimeProductWishlistUv": {
+                    "value": 0
+                },
+                "productName": {
+                    "value": "Sữa rửa mặt giúp làm sạch sâu và cấp ẩm dành cho da thường và da khô CeraVe Hydrating Cleanser 473ML"
+                },
+                "sellerId": {
+                    "value": "200213787404"
+                },
+                "realtimeProductCartItmQty": {
+                    "value": 2
+                },
+                "skuIdList": {
+                    "value": [
+                        9458317286
+                    ]
+                },
+                "productNameIsEmpty": {
+                    "value": false
+                },
+                "sellableQuantity": {
+                    "value": 210
+                },
+                "realtimeProductRevenue": {
+                    "value": 0.0
+                },
+                "statDate": {
+                    "value": 1737734400000
+                },
+                "image": {
+                    "value": "https://vn-live.slatic.net/p/34781d45ead684626ac8540b1184f1fb.png"
+                },
+                "realtimeProductRevenueShare": {
+                    "value": 0.0
+                },
+                "realtimeProductOrders": {
+                    "value": 0
+                },
+                "realtimeProductBuyers": {
+                    "value": 0
+                },
+                "soldOutTag": {
+                    "value": false
+                },
+                "linkIsEmpty": {
+                    "value": false
+                },
+                "venture": {
+                    "value": "VN"
+                },
+                "realtimeProductWishlistCnt": {
+                    "value": 0
+                },
+                "realtimeProductCartByrCnt": {
+                    "value": 2
+                },
+                "realtimeProductIpv": {
+                    "value": 1231
+                },
+                "itemId": {
+                    "value": 2028836862
+                },
+                "realtimeProductIpvUv": {
+                    "value": 659
+                },
+                "realtimeProductConversionRate": {
+                    "value": 0.0
+                },
+                "showExpand": {
+                    "value": true
+                },
+                "imageIsEmpty": {
+                    "value": false
+                },
+                "realtimeProductAddToCartConversionRate": {
+                    "value": 0.003034901365705615
+                },
+                "revenueMP3": {
+                    "value": 0.0
+                }
+            },
+            {
+                "link": {
+                    "value": "https://www.lazada.vn/products/i2029022120.html?urlFlag=true"
+                },
+                "realtimeProductUnitsSold": {
+                    "value": 1
+                },
+                "realtimeProductWishlistUv": {
+                    "value": 0
+                },
+                "productName": {
+                    "value": "Sữa rửa mặt giúp làm sạch sâu dành cho da dầu Cerave Foam Cleanse 473ML"
+                },
+                "sellerId": {
+                    "value": "200213787404"
+                },
+                "realtimeProductCartItmQty": {
+                    "value": 1
+                },
+                "skuIdList": {
+                    "value": [
+                        9458334341
+                    ]
+                },
+                "productNameIsEmpty": {
+                    "value": false
+                },
+                "sellableQuantity": {
+                    "value": 530
+                },
+                "realtimeProductRevenue": {
+                    "value": 475253.0
+                },
+                "statDate": {
+                    "value": 1737734400000
+                },
+                "image": {
+                    "value": "https://vn-live.slatic.net/p/b80b07fe080bd545d21ff23f86df9285.png"
+                },
+                "realtimeProductRevenueShare": {
+                    "value": 0.172844
+                },
+                "realtimeProductOrders": {
+                    "value": 1
+                },
+                "realtimeProductBuyers": {
+                    "value": 1
+                },
+                "soldOutTag": {
+                    "value": false
+                },
+                "linkIsEmpty": {
+                    "value": false
+                },
+                "venture": {
+                    "value": "VN"
+                },
+                "realtimeProductWishlistCnt": {
+                    "value": 0
+                },
+                "realtimeProductCartByrCnt": {
+                    "value": 1
+                },
+                "realtimeProductIpv": {
+                    "value": 118
+                },
+                "itemId": {
+                    "value": 2029022120
+                },
+                "realtimeProductIpvUv": {
+                    "value": 91
+                },
+                "realtimeProductConversionRate": {
+                    "value": 0.01098901098901099
+                },
+                "showExpand": {
+                    "value": true
+                },
+                "imageIsEmpty": {
+                    "value": false
+                },
+                "realtimeProductAddToCartConversionRate": {
+                    "value": 0.01098901098901099
+                },
+                "revenueMP3": {
+                    "value": 475253.0
+                }
+            },
+            {
+                "link": {
+                    "value": "https://www.lazada.vn/products/i2028922907.html?urlFlag=true"
+                },
+                "realtimeProductUnitsSold": {
+                    "value": 0
+                },
+                "realtimeProductWishlistUv": {
+                    "value": 0
+                },
+                "productName": {
+                    "value": "Sữa rửa mặt giúp làm sạch sâu dành cho da dầu Cerave Foaming Facial Cleans  236ML"
+                },
+                "sellerId": {
+                    "value": "200213787404"
+                },
+                "realtimeProductCartItmQty": {
+                    "value": 2
+                },
+                "skuIdList": {
+                    "value": [
+                        9458194863
+                    ]
+                },
+                "productNameIsEmpty": {
+                    "value": false
+                },
+                "sellableQuantity": {
+                    "value": 108
+                },
+                "realtimeProductRevenue": {
+                    "value": 0.0
+                },
+                "statDate": {
+                    "value": 1737734400000
+                },
+                "image": {
+                    "value": "https://vn-live.slatic.net/p/b69cea01472e448e79cf8ffc5b97d0b7.png"
+                },
+                "realtimeProductRevenueShare": {
+                    "value": 0.0
+                },
+                "realtimeProductOrders": {
+                    "value": 0
+                },
+                "realtimeProductBuyers": {
+                    "value": 0
+                },
+                "soldOutTag": {
+                    "value": false
+                },
+                "linkIsEmpty": {
+                    "value": false
+                },
+                "venture": {
+                    "value": "VN"
+                },
+                "realtimeProductWishlistCnt": {
+                    "value": 0
+                },
+                "realtimeProductCartByrCnt": {
+                    "value": 2
+                },
+                "realtimeProductIpv": {
+                    "value": 95
+                },
+                "itemId": {
+                    "value": 2028922907
+                },
+                "realtimeProductIpvUv": {
+                    "value": 75
+                },
+                "realtimeProductConversionRate": {
+                    "value": 0.0
+                },
+                "showExpand": {
+                    "value": true
+                },
+                "imageIsEmpty": {
+                    "value": false
+                },
+                "realtimeProductAddToCartConversionRate": {
+                    "value": 0.02666666666666667
+                },
+                "revenueMP3": {
+                    "value": 0.0
+                }
+            },
+            {
+                "link": {
+                    "value": "https://www.lazada.vn/products/i2028874804.html?urlFlag=true"
+                },
+                "realtimeProductUnitsSold": {
+                    "value": 1
+                },
+                "realtimeProductWishlistUv": {
+                    "value": 0
+                },
+                "productName": {
+                    "value": "Kem dưỡng ẩm phục hồi chuyên sâu và giữ da ẩm mịn suốt 48H CERAVE MOISTURISING CREAM 50ML"
+                },
+                "sellerId": {
+                    "value": "200213787404"
+                },
+                "realtimeProductCartItmQty": {
+                    "value": 2
+                },
+                "skuIdList": {
+                    "value": [
+                        9458168930
+                    ]
+                },
+                "productNameIsEmpty": {
+                    "value": false
+                },
+                "sellableQuantity": {
+                    "value": 55
+                },
+                "realtimeProductRevenue": {
+                    "value": 166118.0
+                },
+                "statDate": {
+                    "value": 1737734400000
+                },
+                "image": {
+                    "value": "https://vn-live.slatic.net/p/81ab5150a6b410b419bfd0337a2895e9.png"
+                },
+                "realtimeProductRevenueShare": {
+                    "value": 0.060415
+                },
+                "realtimeProductOrders": {
+                    "value": 1
+                },
+                "realtimeProductBuyers": {
+                    "value": 1
+                },
+                "soldOutTag": {
+                    "value": false
+                },
+                "linkIsEmpty": {
+                    "value": false
+                },
+                "venture": {
+                    "value": "VN"
+                },
+                "realtimeProductWishlistCnt": {
+                    "value": 0
+                },
+                "realtimeProductCartByrCnt": {
+                    "value": 2
+                },
+                "realtimeProductIpv": {
+                    "value": 60
+                },
+                "itemId": {
+                    "value": 2028874804
+                },
+                "realtimeProductIpvUv": {
+                    "value": 42
+                },
+                "realtimeProductConversionRate": {
+                    "value": 0.02380952380952381
+                },
+                "showExpand": {
+                    "value": true
+                },
+                "imageIsEmpty": {
+                    "value": false
+                },
+                "realtimeProductAddToCartConversionRate": {
+                    "value": 0.04761904761904762
+                },
+                "revenueMP3": {
+                    "value": 166118.0
+                }
+            },
+            {
+                "link": {
+                    "value": "https://www.lazada.vn/products/i2028781933.html?urlFlag=true"
+                },
+                "realtimeProductUnitsSold": {
+                    "value": 4
+                },
+                "realtimeProductWishlistUv": {
+                    "value": 0
+                },
+                "productName": {
+                    "value": "Kem dưỡng ẩm phục hồi chuyên sâu và giữ da ẩm mịn suốt 48H CERAVE MOISTURISING CREAM 454G"
+                },
+                "sellerId": {
+                    "value": "200213787404"
+                },
+                "realtimeProductCartItmQty": {
+                    "value": 6
+                },
+                "skuIdList": {
+                    "value": [
+                        9458230585
+                    ]
+                },
+                "productNameIsEmpty": {
+                    "value": false
+                },
+                "sellableQuantity": {
+                    "value": 97
+                },
+                "realtimeProductRevenue": {
+                    "value": 2080135.0
+                },
+                "statDate": {
+                    "value": 1737734400000
+                },
+                "image": {
+                    "value": "https://vn-live.slatic.net/p/ebdaa2f5bf26f2f973de4e295f26fadf.png"
+                },
+                "realtimeProductRevenueShare": {
+                    "value": 0.756522
+                },
+                "realtimeProductOrders": {
+                    "value": 1
+                },
+                "realtimeProductBuyers": {
+                    "value": 1
+                },
+                "soldOutTag": {
+                    "value": false
+                },
+                "linkIsEmpty": {
+                    "value": false
+                },
+                "venture": {
+                    "value": "VN"
+                },
+                "realtimeProductWishlistCnt": {
+                    "value": 0
+                },
+                "realtimeProductCartByrCnt": {
+                    "value": 3
+                },
+                "realtimeProductIpv": {
+                    "value": 53
+                },
+                "itemId": {
+                    "value": 2028781933
+                },
+                "realtimeProductIpvUv": {
+                    "value": 32
+                },
+                "realtimeProductConversionRate": {
+                    "value": 0.03125
+                },
+                "showExpand": {
+                    "value": true
+                },
+                "imageIsEmpty": {
+                    "value": false
+                },
+                "realtimeProductAddToCartConversionRate": {
+                    "value": 0.09375
+                },
+                "revenueMP3": {
+                    "value": 2080135.0
+                }
+            },
+            {
+                "link": {
+                    "value": "https://www.lazada.vn/products/i2028969337.html?urlFlag=true"
+                },
+                "realtimeProductUnitsSold": {
+                    "value": 0
+                },
+                "realtimeProductWishlistUv": {
+                    "value": 0
+                },
+                "productName": {
+                    "value": "Sữa rửa mặt giúp làm sạch sâu dành cho da thường và da khô Cerave Hydrating Cleanser 236ML"
+                },
+                "sellerId": {
+                    "value": "200213787404"
+                },
+                "realtimeProductCartItmQty": {
+                    "value": 0
+                },
+                "skuIdList": {
+                    "value": [
+                        9458222697
+                    ]
+                },
+                "productNameIsEmpty": {
+                    "value": false
+                },
+                "realtimeProductRevenue": {
+                    "value": 0.0
+                },
+                "statDate": {
+                    "value": 1737734400000
+                },
+                "image": {
+                    "value": "https://vn-live.slatic.net/p/37894b5f7813c5dc5850b599e1adbef8.png"
+                },
+                "realtimeProductRevenueShare": {
+                    "value": 0.0
+                },
+                "realtimeProductOrders": {
+                    "value": 0
+                },
+                "realtimeProductBuyers": {
+                    "value": 0
+                },
+                "linkIsEmpty": {
+                    "value": false
+                },
+                "venture": {
+                    "value": "VN"
+                },
+                "realtimeProductWishlistCnt": {
+                    "value": 0
+                },
+                "realtimeProductCartByrCnt": {
+                    "value": 0
+                },
+                "realtimeProductIpv": {
+                    "value": 37
+                },
+                "itemId": {
+                    "value": 2028969337
+                },
+                "realtimeProductIpvUv": {
+                    "value": 31
+                },
+                "realtimeProductConversionRate": {
+                    "value": 0.0
+                },
+                "showExpand": {
+                    "value": false
+                },
+                "imageIsEmpty": {
+                    "value": false
+                },
+                "realtimeProductAddToCartConversionRate": {
+                    "value": 0.0
+                },
+                "revenueMP3": {
+                    "value": 0.0
+                }
+            },
+            {
+                "link": {
+                    "value": "https://www.lazada.vn/products/i2028967302.html?urlFlag=true"
+                },
+                "realtimeProductUnitsSold": {
+                    "value": 0
+                },
+                "realtimeProductWishlistUv": {
+                    "value": 0
+                },
+                "productName": {
+                    "value": "Sữa dưỡng ẩm phục hồi chuyên sâu và giữ da ẩm mịn suốt 48H CERAVE MOISTURISING LOTION 473ML"
+                },
+                "sellerId": {
+                    "value": "200213787404"
+                },
+                "realtimeProductCartItmQty": {
+                    "value": 1
+                },
+                "skuIdList": {
+                    "value": [
+                        9458166883
+                    ]
+                },
+                "productNameIsEmpty": {
+                    "value": false
+                },
+                "sellableQuantity": {
+                    "value": 58
+                },
+                "realtimeProductRevenue": {
+                    "value": 0.0
+                },
+                "statDate": {
+                    "value": 1737734400000
+                },
+                "image": {
+                    "value": "https://vn-live.slatic.net/p/a2d860c2c6d29bb84f37d4d95031c341.png"
+                },
+                "realtimeProductRevenueShare": {
+                    "value": 0.0
+                },
+                "realtimeProductOrders": {
+                    "value": 0
+                },
+                "realtimeProductBuyers": {
+                    "value": 0
+                },
+                "soldOutTag": {
+                    "value": false
+                },
+                "linkIsEmpty": {
+                    "value": false
+                },
+                "venture": {
+                    "value": "VN"
+                },
+                "realtimeProductWishlistCnt": {
+                    "value": 0
+                },
+                "realtimeProductCartByrCnt": {
+                    "value": 1
+                },
+                "realtimeProductIpv": {
+                    "value": 43
+                },
+                "itemId": {
+                    "value": 2028967302
+                },
+                "realtimeProductIpvUv": {
+                    "value": 26
+                },
+                "realtimeProductConversionRate": {
+                    "value": 0.0
+                },
+                "showExpand": {
+                    "value": true
+                },
+                "imageIsEmpty": {
+                    "value": false
+                },
+                "realtimeProductAddToCartConversionRate": {
+                    "value": 0.03846153846153846
+                },
+                "revenueMP3": {
+                    "value": 0.0
+                }
+            },
+            {
+                "link": {
+                    "value": "https://www.lazada.vn/products/i2836044322.html?urlFlag=true"
+                },
+                "realtimeProductUnitsSold": {
+                    "value": 0
+                },
+                "realtimeProductWishlistUv": {
+                    "value": 0
+                },
+                "productName": {
+                    "value": "Kem dưỡng ẩm & kiềm dầu dành cho da dầu và da hỗn hợp Cerave Oil Control Moisturizing Cream 52ml"
+                },
+                "sellerId": {
+                    "value": "200213787404"
+                },
+                "realtimeProductCartItmQty": {
+                    "value": 1
+                },
+                "skuIdList": {
+                    "value": [
+                        13792407778
+                    ]
+                },
+                "productNameIsEmpty": {
+                    "value": false
+                },
+                "sellableQuantity": {
+                    "value": 58
+                },
+                "realtimeProductRevenue": {
+                    "value": 0.0
+                },
+                "statDate": {
+                    "value": 1737734400000
+                },
+                "image": {
+                    "value": "https://vn-live.slatic.net/p/089ce7b344de80079c1d0987bb1eae43.png"
+                },
+                "realtimeProductRevenueShare": {
+                    "value": 0.0
+                },
+                "realtimeProductOrders": {
+                    "value": 0
+                },
+                "realtimeProductBuyers": {
+                    "value": 0
+                },
+                "soldOutTag": {
+                    "value": false
+                },
+                "linkIsEmpty": {
+                    "value": false
+                },
+                "venture": {
+                    "value": "VN"
+                },
+                "realtimeProductWishlistCnt": {
+                    "value": 0
+                },
+                "realtimeProductCartByrCnt": {
+                    "value": 1
+                },
+                "realtimeProductIpv": {
+                    "value": 28
+                },
+                "itemId": {
+                    "value": 2836044322
+                },
+                "realtimeProductIpvUv": {
+                    "value": 21
+                },
+                "realtimeProductConversionRate": {
+                    "value": 0.0
+                },
+                "showExpand": {
+                    "value": true
+                },
+                "imageIsEmpty": {
+                    "value": false
+                },
+                "realtimeProductAddToCartConversionRate": {
+                    "value": 0.04761904761904762
+                },
+                "revenueMP3": {
+                    "value": 0.0
+                }
+            },
+            {
+                "link": {
+                    "value": "https://www.lazada.vn/products/i2447385502.html?urlFlag=true"
+                },
+                "realtimeProductUnitsSold": {
+                    "value": 0
+                },
+                "realtimeProductWishlistUv": {
+                    "value": 0
+                },
+                "productName": {
+                    "value": "Sữa rửa mặt làm sạch & tẩy tế bào chết dịu nhẹ CeraVe SA Smoothing Cleanser 236ml"
+                },
+                "sellerId": {
+                    "value": "200213787404"
+                },
+                "realtimeProductCartItmQty": {
+                    "value": 0
+                },
+                "skuIdList": {
+                    "value": [
+                        12051252669
+                    ]
+                },
+                "productNameIsEmpty": {
+                    "value": false
+                },
+                "realtimeProductRevenue": {
+                    "value": 0.0
+                },
+                "statDate": {
+                    "value": 1737734400000
+                },
+                "image": {
+                    "value": "https://vn-live.slatic.net/p/a7f80b40127e3abf193fb7b0155b1222.png"
+                },
+                "realtimeProductRevenueShare": {
+                    "value": 0.0
+                },
+                "realtimeProductOrders": {
+                    "value": 0
+                },
+                "realtimeProductBuyers": {
+                    "value": 0
+                },
+                "linkIsEmpty": {
+                    "value": false
+                },
+                "venture": {
+                    "value": "VN"
+                },
+                "realtimeProductWishlistCnt": {
+                    "value": 0
+                },
+                "realtimeProductCartByrCnt": {
+                    "value": 0
+                },
+                "realtimeProductIpv": {
+                    "value": 21
+                },
+                "itemId": {
+                    "value": 2447385502
+                },
+                "realtimeProductIpvUv": {
+                    "value": 19
+                },
+                "realtimeProductConversionRate": {
+                    "value": 0.0
+                },
+                "showExpand": {
+                    "value": false
+                },
+                "imageIsEmpty": {
+                    "value": false
+                },
+                "realtimeProductAddToCartConversionRate": {
+                    "value": 0.0
+                },
+                "revenueMP3": {
+                    "value": 0.0
+                }
+            },
+            {
+                "link": {
+                    "value": "https://www.lazada.vn/products/i2929082006.html?urlFlag=true"
+                },
+                "realtimeProductUnitsSold": {
+                    "value": 0
+                },
+                "realtimeProductWishlistUv": {
+                    "value": 0
+                },
+                "productName": {
+                    "value": "Sữa dưỡng ẩm chuyên biệt ban ngày dành cho da mặt có chỉ số chống nắng SPF 30"
+                },
+                "sellerId": {
+                    "value": "200213787404"
+                },
+                "realtimeProductCartItmQty": {
+                    "value": 0
+                },
+                "skuIdList": {
+                    "value": [
+                        14138156040
+                    ]
+                },
+                "productNameIsEmpty": {
+                    "value": false
+                },
+                "realtimeProductRevenue": {
+                    "value": 0.0
+                },
+                "statDate": {
+                    "value": 1737734400000
+                },
+                "image": {
+                    "value": "https://vn-live.slatic.net/p/91dfe9f2657c887f9e56de94143200df.png"
+                },
+                "realtimeProductRevenueShare": {
+                    "value": 0.0
+                },
+                "realtimeProductOrders": {
+                    "value": 0
+                },
+                "realtimeProductBuyers": {
+                    "value": 0
+                },
+                "linkIsEmpty": {
+                    "value": false
+                },
+                "venture": {
+                    "value": "VN"
+                },
+                "realtimeProductWishlistCnt": {
+                    "value": 0
+                },
+                "realtimeProductCartByrCnt": {
+                    "value": 0
+                },
+                "realtimeProductIpv": {
+                    "value": 28
+                },
+                "itemId": {
+                    "value": 2929082006
+                },
+                "realtimeProductIpvUv": {
+                    "value": 19
+                },
+                "realtimeProductConversionRate": {
+                    "value": 0.0
+                },
+                "showExpand": {
+                    "value": false
+                },
+                "imageIsEmpty": {
+                    "value": false
+                },
+                "realtimeProductAddToCartConversionRate": {
+                    "value": 0.0
+                },
+                "revenueMP3": {
+                    "value": 0.0
+                }
+            },
+            {
+                "link": {
+                    "value": "https://www.lazada.vn/products/i2028966367.html?urlFlag=true"
+                },
+                "realtimeProductUnitsSold": {
+                    "value": 0
+                },
+                "realtimeProductWishlistUv": {
+                    "value": 0
+                },
+                "productName": {
+                    "value": "Sữa dưỡng ẩm ban đêm Cerave PM Facial Moisturiz Lotion 52ML"
+                },
+                "sellerId": {
+                    "value": "200213787404"
+                },
+                "realtimeProductCartItmQty": {
+                    "value": 0
+                },
+                "skuIdList": {
+                    "value": [
+                        9458232485
+                    ]
+                },
+                "productNameIsEmpty": {
+                    "value": false
+                },
+                "realtimeProductRevenue": {
+                    "value": 0.0
+                },
+                "statDate": {
+                    "value": 1737734400000
+                },
+                "image": {
+                    "value": "https://vn-live.slatic.net/p/293bdd7e4b03129319b2a770c708919d.png"
+                },
+                "realtimeProductRevenueShare": {
+                    "value": 0.0
+                },
+                "realtimeProductOrders": {
+                    "value": 0
+                },
+                "realtimeProductBuyers": {
+                    "value": 0
+                },
+                "linkIsEmpty": {
+                    "value": false
+                },
+                "venture": {
+                    "value": "VN"
+                },
+                "realtimeProductWishlistCnt": {
+                    "value": 0
+                },
+                "realtimeProductCartByrCnt": {
+                    "value": 0
+                },
+                "realtimeProductIpv": {
+                    "value": 21
+                },
+                "itemId": {
+                    "value": 2028966367
+                },
+                "realtimeProductIpvUv": {
+                    "value": 15
+                },
+                "realtimeProductConversionRate": {
+                    "value": 0.0
+                },
+                "showExpand": {
+                    "value": false
+                },
+                "imageIsEmpty": {
+                    "value": false
+                },
+                "realtimeProductAddToCartConversionRate": {
+                    "value": 0.0
+                },
+                "revenueMP3": {
+                    "value": 0.0
+                }
+            },
+            {
+                "link": {
+                    "value": "https://www.lazada.vn/products/i2028976344.html?urlFlag=true"
+                },
+                "realtimeProductUnitsSold": {
+                    "value": 0
+                },
+                "realtimeProductWishlistUv": {
+                    "value": 0
+                },
+                "productName": {
+                    "value": "Kem dưỡng ẩm phục hồi chuyên sâu và giữ da ẩm mịn suốt 48H CERAVE MOISTURISING CREAM 340G"
+                },
+                "sellerId": {
+                    "value": "200213787404"
+                },
+                "realtimeProductCartItmQty": {
+                    "value": 1
+                },
+                "skuIdList": {
+                    "value": [
+                        9458291677
+                    ]
+                },
+                "productNameIsEmpty": {
+                    "value": false
+                },
+                "sellableQuantity": {
+                    "value": 35
+                },
+                "realtimeProductRevenue": {
+                    "value": 0.0
+                },
+                "statDate": {
+                    "value": 1737734400000
+                },
+                "image": {
+                    "value": "https://vn-live.slatic.net/p/7174d16abaf03c08877dfc724d9e8a07.png"
+                },
+                "realtimeProductRevenueShare": {
+                    "value": 0.0
+                },
+                "realtimeProductOrders": {
+                    "value": 0
+                },
+                "realtimeProductBuyers": {
+                    "value": 0
+                },
+                "soldOutTag": {
+                    "value": false
+                },
+                "linkIsEmpty": {
+                    "value": false
+                },
+                "venture": {
+                    "value": "VN"
+                },
+                "realtimeProductWishlistCnt": {
+                    "value": 0
+                },
+                "realtimeProductCartByrCnt": {
+                    "value": 1
+                },
+                "realtimeProductIpv": {
+                    "value": 17
+                },
+                "itemId": {
+                    "value": 2028976344
+                },
+                "realtimeProductIpvUv": {
+                    "value": 14
+                },
+                "realtimeProductConversionRate": {
+                    "value": 0.0
+                },
+                "showExpand": {
+                    "value": true
+                },
+                "imageIsEmpty": {
+                    "value": false
+                },
+                "realtimeProductAddToCartConversionRate": {
+                    "value": 0.07142857142857142
+                },
+                "revenueMP3": {
+                    "value": 0.0
+                }
+            },
+            {
+                "link": {
+                    "value": "https://www.lazada.vn/products/i2622038462.html?urlFlag=true"
+                },
+                "realtimeProductUnitsSold": {
+                    "value": 0
+                },
+                "realtimeProductWishlistUv": {
+                    "value": 0
+                },
+                "productName": {
+                    "value": "Bộ sản phẩm làm sạch sâu và dưỡng ẩm dành cho da thường - da khô CeraVe Hydrating Cleanser 88ml & Moisturising Cream 50ml"
+                },
+                "sellerId": {
+                    "value": "200213787404"
+                },
+                "realtimeProductCartItmQty": {
+                    "value": 0
+                },
+                "skuIdList": {
+                    "value": [
+                        12791322940
+                    ]
+                },
+                "productNameIsEmpty": {
+                    "value": false
+                },
+                "realtimeProductRevenue": {
+                    "value": 0.0
+                },
+                "statDate": {
+                    "value": 1737734400000
+                },
+                "image": {
+                    "value": "https://vn-live.slatic.net/p/d69167a097702a91a17cab0d8a1f7e14.png"
+                },
+                "realtimeProductRevenueShare": {
+                    "value": 0.0
+                },
+                "realtimeProductOrders": {
+                    "value": 0
+                },
+                "realtimeProductBuyers": {
+                    "value": 0
+                },
+                "linkIsEmpty": {
+                    "value": false
+                },
+                "venture": {
+                    "value": "VN"
+                },
+                "realtimeProductWishlistCnt": {
+                    "value": 0
+                },
+                "realtimeProductCartByrCnt": {
+                    "value": 0
+                },
+                "realtimeProductIpv": {
+                    "value": 13
+                },
+                "itemId": {
+                    "value": 2622038462
+                },
+                "realtimeProductIpvUv": {
+                    "value": 13
+                },
+                "realtimeProductConversionRate": {
+                    "value": 0.0
+                },
+                "showExpand": {
+                    "value": false
+                },
+                "imageIsEmpty": {
+                    "value": false
+                },
+                "realtimeProductAddToCartConversionRate": {
+                    "value": 0.0
+                },
+                "revenueMP3": {
+                    "value": 0.0
+                }
+            },
+            {
+                "link": {
+                    "value": "https://www.lazada.vn/products/i2028939549.html?urlFlag=true"
+                },
+                "realtimeProductUnitsSold": {
+                    "value": 0
+                },
+                "realtimeProductWishlistUv": {
+                    "value": 0
+                },
+                "productName": {
+                    "value": "Sữa dưỡng ẩm phục hồi chuyên sâu và giữ da ẩm mịn suốt 48H CERAVE MOISTURISING LOTION 88ML"
+                },
+                "sellerId": {
+                    "value": "200213787404"
+                },
+                "realtimeProductCartItmQty": {
+                    "value": 1
+                },
+                "skuIdList": {
+                    "value": [
+                        9458268370
+                    ]
+                },
+                "productNameIsEmpty": {
+                    "value": false
+                },
+                "sellableQuantity": {
+                    "value": 24
+                },
+                "realtimeProductRevenue": {
+                    "value": 0.0
+                },
+                "statDate": {
+                    "value": 1737734400000
+                },
+                "image": {
+                    "value": "https://vn-live.slatic.net/p/e811e1e3fca995785c9bba9d84847514.png"
+                },
+                "realtimeProductRevenueShare": {
+                    "value": 0.0
+                },
+                "realtimeProductOrders": {
+                    "value": 0
+                },
+                "realtimeProductBuyers": {
+                    "value": 0
+                },
+                "soldOutTag": {
+                    "value": false
+                },
+                "linkIsEmpty": {
+                    "value": false
+                },
+                "venture": {
+                    "value": "VN"
+                },
+                "realtimeProductWishlistCnt": {
+                    "value": 0
+                },
+                "realtimeProductCartByrCnt": {
+                    "value": 1
+                },
+                "realtimeProductIpv": {
+                    "value": 12
+                },
+                "itemId": {
+                    "value": 2028939549
+                },
+                "realtimeProductIpvUv": {
+                    "value": 3
+                },
+                "realtimeProductConversionRate": {
+                    "value": 0.0
+                },
+                "showExpand": {
+                    "value": true
+                },
+                "imageIsEmpty": {
+                    "value": false
+                },
+                "realtimeProductAddToCartConversionRate": {
+                    "value": 0.3333333333333333
+                },
+                "revenueMP3": {
+                    "value": 0.0
+                }
+            },
+            {
+                "link": {
+                    "value": "https://www.lazada.vn/products/i2029044077.html?urlFlag=true"
+                },
+                "realtimeProductUnitsSold": {
+                    "value": 0
+                },
+                "realtimeProductWishlistUv": {
+                    "value": 0
+                },
+                "productName": {
+                    "value": "Sữa dưỡng ẩm phục hồi chuyên sâu và giữ da ẩm mịn suốt 48H CERAVE MOISTURISING LOTION 236ML"
+                },
+                "sellerId": {
+                    "value": "200213787404"
+                },
+                "realtimeProductCartItmQty": {
+                    "value": 0
+                },
+                "skuIdList": {
+                    "value": [
+                        9458226520
+                    ]
+                },
+                "productNameIsEmpty": {
+                    "value": false
+                },
+                "realtimeProductRevenue": {
+                    "value": 0.0
+                },
+                "statDate": {
+                    "value": 1737734400000
+                },
+                "image": {
+                    "value": "https://vn-live.slatic.net/p/0d3277e3ffb9b497b1454252644cb60e.png"
+                },
+                "realtimeProductRevenueShare": {
+                    "value": 0.0
+                },
+                "realtimeProductOrders": {
+                    "value": 0
+                },
+                "realtimeProductBuyers": {
+                    "value": 0
+                },
+                "linkIsEmpty": {
+                    "value": false
+                },
+                "venture": {
+                    "value": "VN"
+                },
+                "realtimeProductWishlistCnt": {
+                    "value": 0
+                },
+                "realtimeProductCartByrCnt": {
+                    "value": 0
+                },
+                "realtimeProductIpv": {
+                    "value": 4
+                },
+                "itemId": {
+                    "value": 2029044077
+                },
+                "realtimeProductIpvUv": {
+                    "value": 3
+                },
+                "realtimeProductConversionRate": {
+                    "value": 0.0
+                },
+                "showExpand": {
+                    "value": false
+                },
+                "imageIsEmpty": {
+                    "value": false
+                },
+                "realtimeProductAddToCartConversionRate": {
+                    "value": 0.0
+                },
+                "revenueMP3": {
+                    "value": 0.0
+                }
+            },
+            {
+                "link": {
+                    "value": "https://www.lazada.vn/products/i2028930571.html?urlFlag=true"
+                },
+                "realtimeProductUnitsSold": {
+                    "value": 0
+                },
+                "realtimeProductWishlistUv": {
+                    "value": 0
+                },
+                "productName": {
+                    "value": "Sữa rửa mặt giúp làm sạch sâu dành cho da thường và da khô Cerave Hydrating Cleanser 88ML"
+                },
+                "sellerId": {
+                    "value": "200213787404"
+                },
+                "realtimeProductCartItmQty": {
+                    "value": 1
+                },
+                "skuIdList": {
+                    "value": [
+                        9458171936
+                    ]
+                },
+                "productNameIsEmpty": {
+                    "value": false
+                },
+                "sellableQuantity": {
+                    "value": 22
+                },
+                "realtimeProductRevenue": {
+                    "value": 0.0
+                },
+                "statDate": {
+                    "value": 1737734400000
+                },
+                "image": {
+                    "value": "https://vn-live.slatic.net/p/665aacd9803d2197029456d5820632c5.png"
+                },
+                "realtimeProductRevenueShare": {
+                    "value": 0.0
+                },
+                "realtimeProductOrders": {
+                    "value": 0
+                },
+                "realtimeProductBuyers": {
+                    "value": 0
+                },
+                "soldOutTag": {
+                    "value": false
+                },
+                "linkIsEmpty": {
+                    "value": false
+                },
+                "venture": {
+                    "value": "VN"
+                },
+                "realtimeProductWishlistCnt": {
+                    "value": 0
+                },
+                "realtimeProductCartByrCnt": {
+                    "value": 1
+                },
+                "realtimeProductIpv": {
+                    "value": 2
+                },
+                "itemId": {
+                    "value": 2028930571
+                },
+                "realtimeProductIpvUv": {
+                    "value": 2
+                },
+                "realtimeProductConversionRate": {
+                    "value": 0.0
+                },
+                "showExpand": {
+                    "value": true
+                },
+                "imageIsEmpty": {
+                    "value": false
+                },
+                "realtimeProductAddToCartConversionRate": {
+                    "value": 0.5
+                },
+                "revenueMP3": {
+                    "value": 0.0
+                }
+            },
+            {
+                "link": {
+                    "value": "https://www.lazada.vn/products/i2028954414.html?urlFlag=true"
+                },
+                "realtimeProductUnitsSold": {
+                    "value": 0
+                },
+                "realtimeProductWishlistUv": {
+                    "value": 0
+                },
+                "productName": {
+                    "value": "Sữa rửa mặt giúp làm sạch sâu dành cho da dầu  Cerave Foaming Facial Cleanser 88ml"
+                },
+                "sellerId": {
+                    "value": "200213787404"
+                },
+                "realtimeProductCartItmQty": {
+                    "value": 1
+                },
+                "skuIdList": {
+                    "value": [
+                        9458350065
+                    ]
+                },
+                "productNameIsEmpty": {
+                    "value": false
+                },
+                "sellableQuantity": {
+                    "value": 87
+                },
+                "realtimeProductRevenue": {
+                    "value": 0.0
+                },
+                "statDate": {
+                    "value": 1737734400000
+                },
+                "image": {
+                    "value": "https://vn-live.slatic.net/p/0221b5e36f73218d8f86e8c1b13a6738.png"
+                },
+                "realtimeProductRevenueShare": {
+                    "value": 0.0
+                },
+                "realtimeProductOrders": {
+                    "value": 0
+                },
+                "realtimeProductBuyers": {
+                    "value": 0
+                },
+                "soldOutTag": {
+                    "value": false
+                },
+                "linkIsEmpty": {
+                    "value": false
+                },
+                "venture": {
+                    "value": "VN"
+                },
+                "realtimeProductWishlistCnt": {
+                    "value": 0
+                },
+                "realtimeProductCartByrCnt": {
+                    "value": 1
+                },
+                "realtimeProductIpv": {
+                    "value": 4
+                },
+                "itemId": {
+                    "value": 2028954414
+                },
+                "realtimeProductIpvUv": {
+                    "value": 2
+                },
+                "realtimeProductConversionRate": {
+                    "value": 0.0
+                },
+                "showExpand": {
+                    "value": true
+                },
+                "imageIsEmpty": {
+                    "value": false
+                },
+                "realtimeProductAddToCartConversionRate": {
+                    "value": 0.5
+                },
+                "revenueMP3": {
+                    "value": 0.0
+                }
+            },
+            {
+                "link": {
+                    "value": "https://www.lazada.vn/products/i2446594646.html?urlFlag=true"
+                },
+                "realtimeProductUnitsSold": {
+                    "value": 0
+                },
+                "realtimeProductWishlistUv": {
+                    "value": 0
+                },
+                "productName": {
+                    "value": "Kem dưỡng ẩm dành cho da khô ráp, sần sùi CeraVe SA Smoothing Cream 177ml"
+                },
+                "sellerId": {
+                    "value": "200213787404"
+                },
+                "realtimeProductCartItmQty": {
+                    "value": 0
+                },
+                "skuIdList": {
+                    "value": [
+                        12050743729
+                    ]
+                },
+                "productNameIsEmpty": {
+                    "value": false
+                },
+                "realtimeProductRevenue": {
+                    "value": 0.0
+                },
+                "statDate": {
+                    "value": 1737734400000
+                },
+                "image": {
+                    "value": "https://vn-live.slatic.net/p/67e1757f782b6586b74702e88d0bf524.png"
+                },
+                "realtimeProductRevenueShare": {
+                    "value": 0.0
+                },
+                "realtimeProductOrders": {
+                    "value": 0
+                },
+                "realtimeProductBuyers": {
+                    "value": 0
+                },
+                "linkIsEmpty": {
+                    "value": false
+                },
+                "venture": {
+                    "value": "VN"
+                },
+                "realtimeProductWishlistCnt": {
+                    "value": 0
+                },
+                "realtimeProductCartByrCnt": {
+                    "value": 0
+                },
+                "realtimeProductIpv": {
+                    "value": 5
+                },
+                "itemId": {
+                    "value": 2446594646
+                },
+                "realtimeProductIpvUv": {
+                    "value": 2
+                },
+                "realtimeProductConversionRate": {
+                    "value": 0.0
+                },
+                "showExpand": {
+                    "value": false
+                },
+                "imageIsEmpty": {
+                    "value": false
+                },
+                "realtimeProductAddToCartConversionRate": {
+                    "value": 0.0
+                },
+                "revenueMP3": {
+                    "value": 0.0
+                }
+            },
+            {
+                "link": {
+                    "value": "https://www.lazada.vn/products/i2470406688.html?urlFlag=true"
+                },
+                "realtimeProductUnitsSold": {
+                    "value": 0
+                },
+                "realtimeProductWishlistUv": {
+                    "value": 0
+                },
+                "productName": {
+                    "value": "Kem dưỡng ẩm dành cho da khô ráp, sần sùi CeraVe SA Smoothing Cream 340g"
+                },
+                "sellerId": {
+                    "value": "200213787404"
+                },
+                "realtimeProductCartItmQty": {
+                    "value": 0
+                },
+                "skuIdList": {
+                    "value": [
+                        12101799409
+                    ]
+                },
+                "productNameIsEmpty": {
+                    "value": false
+                },
+                "realtimeProductRevenue": {
+                    "value": 0.0
+                },
+                "statDate": {
+                    "value": 1737734400000
+                },
+                "image": {
+                    "value": "https://vn-live.slatic.net/p/eb64f05c8a8357fe1e1b6faa50b5b6eb.png"
+                },
+                "realtimeProductRevenueShare": {
+                    "value": 0.0
+                },
+                "realtimeProductOrders": {
+                    "value": 0
+                },
+                "realtimeProductBuyers": {
+                    "value": 0
+                },
+                "linkIsEmpty": {
+                    "value": false
+                },
+                "venture": {
+                    "value": "VN"
+                },
+                "realtimeProductWishlistCnt": {
+                    "value": 0
+                },
+                "realtimeProductCartByrCnt": {
+                    "value": 0
+                },
+                "realtimeProductIpv": {
+                    "value": 1
+                },
+                "itemId": {
+                    "value": 2470406688
+                },
+                "realtimeProductIpvUv": {
+                    "value": 1
+                },
+                "realtimeProductConversionRate": {
+                    "value": 0.0
+                },
+                "showExpand": {
+                    "value": false
+                },
+                "imageIsEmpty": {
+                    "value": false
+                },
+                "realtimeProductAddToCartConversionRate": {
+                    "value": 0.0
+                },
+                "revenueMP3": {
+                    "value": 0.0
+                }
+            }
+        ],
+        "recordCount": 19,
+        "updateTime": "2025-01-25 14:04:11"
+    },
+    "spend": "276",
+    "success": true,
+    "traceId": "2101597017377886517628512ebfa6"
+}

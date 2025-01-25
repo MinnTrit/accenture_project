@@ -8,6 +8,30 @@
         <body>
             <h2>Input parrameters</h2>
             <form id="inputForm" method="POST">
+                
+                <div id="inputCredentials">
+                    <label for="credentials">Choose the credentials from the server</label>
+                    <select name="credentials" id="credentials">
+                        <option value="">--Select the credentials--</option>
+                        {% for item in items %}
+                            <option value="{{ item }}">{{ item }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div id="productConfig">
+                    <label for="productSpreadsheet">Input the product spreadsheet name</label>
+                    <input name="productSpreadsheet" type="text" placeholder="Input your product spreadsheet">
+                    <label for="productWorksheet">Input the product tab name</label>
+                    <input name="productWorksheet" type="text" placeholder="Input your product tab name">
+                </div>
+
+                <div id="voucherConfig">
+                    <label for="voucherSpreadsheet">Input the voucher spreadsheet name</label>
+                    <input name = "voucherSpreadsheet" type="text" placeholder="Input your voucher spreadsheet">
+                    <label for="voucherWorksheet">Input the voucher tab name</label>
+                    <input name="voucherWorksheet" type="text" placeholder="Input your voucher tab name">
+                </div>
 
                 <div id="launcherContainer">
                     <label for="launcher">Input your name</label>
@@ -50,6 +74,9 @@
 
             <h2>Delete scheduled tasks</h2>
             <a href="{{ url_for('delete_task') }}">View tasks list</a>
+
+            <h2>Added Google Auth Credentials</h2>
+            <a href="{{ url_for('upload_credentials') }}">Upload Google Auth Credentials</a>
 
             <script>
                 document.getElementById('addButton').addEventListener('click', function () {

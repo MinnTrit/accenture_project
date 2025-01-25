@@ -3,9 +3,11 @@ import os
 from redbeat import RedBeatSchedulerEntry
 from datetime import datetime, timedelta
 from tasks import main_task, app, celery
+import json
 import redis
 #Initialize common variables
-upload_folder='uploads'
+upload_folder = app.config['UPLOAD_FOLDER']
+credentials_folder = app.config['CREDENTIAL_FOLDER']
 instance_host = os.getenv('instance_host')
 r = redis.StrictRedis(host=instance_host,port=6379, db=0)
 @app.route('/', methods=['GET', 'POST'])
@@ -14,11 +16,17 @@ def index():
         if not os.path.exists(upload_folder):
             os.makedirs(upload_folder)
         result_countries_list = []
+        google_credential_name = request.form.get('credentials')
+        google_credential_path = os.path.join(credentials_folder, google_credential_name)
         input_countries_list = request.form.getlist('countryList')
         input_raw_cookies = request.form.getlist('cookiesString')
         input_interval = request.form.get("timeInterval")
         input_time_quantifier = request.form.get("timeQuantifier")
         cleaning_option = request.form.get('cleaningOption') == 'True'
+        product_spreadsheet = request.form.get('productSpreadsheet').strip()
+        product_tab = request.form.get('productWorksheet').strip()
+        voucher_spreadsheet = request.form.get('voucherSpreadsheet').strip()
+        voucher_tab = request.form.get('voucherWorksheet').strip()
         launcher = request.form.get('launcher')
         for raw_country_list in input_countries_list: 
             country_list = [country.strip() for country in raw_country_list.split(",")]
@@ -34,16 +42,29 @@ def index():
             interval = timedelta(minutes=int(input_interval))
         else:
             interval = timedelta(seconds=int(input_interval))
-        task = main_task.delay(jobs_details, cleaning_option)
+        task = main_task.delay(
+            google_credential_path=google_credential_path,
+            jobs_details=jobs_details, 
+            cleaning_option=cleaning_option,
+            product_spreadsheet=product_spreadsheet,
+            voucher_spreadsheet=voucher_spreadsheet,
+            product_tab=product_tab,
+            voucher_tab=voucher_tab
+            )
         task_id = task.id
         entry = RedBeatSchedulerEntry(
             f'laz-task-{task_id}@{launcher}@{input_interval}-{input_time_quantifier}@{result_countries_list}',
             'tasks.main_task',
             interval,
             kwargs={
+                "google_credential_path": google_credential_path,
                 "jobs_details":jobs_details,
-                "cleaning_option": cleaning_option
-                },
+                "cleaning_option": cleaning_option,
+                "product_spreadsheet": product_spreadsheet,
+                "voucher_spreadsheet": voucher_spreadsheet,
+                "product_tab": product_tab,
+                "voucher_tab": voucher_tab
+            },
             app=celery
         )
         entry.save()
@@ -55,7 +76,8 @@ def index():
         }
         return jsonify(task_response)
     else:
-        return render_template('index.html')
+        list_items = os.listdir(credentials_folder)
+        return render_template('index.html', items=list_items)
     
 @app.route('/delete', methods=['GET', 'POST'])
 def delete_task():
@@ -77,6 +99,55 @@ def delete_task():
                 'message': e
             }
         return jsonify(response)
+    
+@app.route('/credentials', methods=['GET','POST'])
+def upload_credentials():
+    if request.method == 'POST':
+        uploaded_file = request.files['uploadedGoogleAuth']
+        launcher = request.form.get('credentialUploader')
+        file_name = f'{launcher}_{uploaded_file.filename}'
+        file_path = os.path.join(app.config['CREDENTIAL_FOLDER'], file_name)
+        if uploaded_file.filename.endswith('.json'):
+            try:
+                uploaded_file.save(file_path)
+                response_content = {
+                    'credentials_path': file_path, 
+                    'status_code': 200
+                }
+            except Exception as e:
+                response_content = {
+                    'error_message': e,
+                    'status_code': 400
+                }
+        else:
+            response_content = {
+                'error_message': 'Google Auth Credential must in json format',
+                'status_code': 400
+            }
+        return jsonify(response_content)
+    else:
+        list_items = os.listdir('/home/ubuntu/credentials')
+        owners = [item.split('_')[0] for item in list_items]
+        credentials = [item.split('_')[1] for item in list_items]
+        return render_template('credentials.html', owners=owners, credentials=credentials)
+    
+@app.route('/delete_credentials', methods=['POST'])
+def delete_credentials():
+    credential_name = request.form.get('deleteCredentials')
+    file_path = os.path.join(credentials_folder, credential_name)
+    if os.path.exists(file_path):
+        os.remove(file_path)
+        task_response = {
+            'deleted_credential': file_path, 
+            'status_code': 200
+        }
+    else:
+        task_response = {
+            'deleted_credential': file_path, 
+            'status_code': 400
+        }
+    return jsonify(task_response)
+
 
 @app.template_filter('datetimeformat')
 def datetimeformat(value):
