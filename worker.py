@@ -9,7 +9,7 @@ def make_celery(app):
     celery.conf.update(app.config)
     celery.conf.CELERY_INCLUDE = ['tasks']
     celery.conf.CELERYBEAT_SCHEDULER = 'redbeat.RedBeatScheduler'
-    celery.conf.REDBEAT_LOCK_TIMEOUT = 0
+    celery.conf.REDBEAT_LOCK_TIMEOUT = 5
     celery.conf.CELERY_ACKS_ON_FAILURE_OR_TIMEOUT = False
     celery.autodiscover_tasks(['tasks'])
     
