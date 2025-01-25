@@ -8,7 +8,6 @@ import os
 
 app = Flask(__name__)
 broker_url = os.getenv('broker_url')
-broker_url = 'redis://localhost:6379'
 app.config['CELERY_BROKER_URL'] = broker_url
 app.config['CELERY_RESULT_BACKEND'] = broker_url
 app.config['REDBEAT_REDIS_URL'] = broker_url
