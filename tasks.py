@@ -26,6 +26,7 @@ def main_task(
     voucher_spreadsheet: str, 
     product_tab: str,
     voucher_tab: str,
+    reports_type: str,
     cleaning_option: bool
     ):
     #Initialize the datalake client
@@ -49,6 +50,6 @@ def main_task(
             google_client=google_client
         )
 
-        processor.get_all_data()
+        processor.get_all_data(reports_type)
     else:
         print('Failed initializing the Google Client')

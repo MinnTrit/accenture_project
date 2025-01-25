@@ -20,7 +20,15 @@
 
             <h2>Input parrameters</h2>
             <form id="inputForm" method="POST">
-                
+                <label for="reportsType">Choose the reports type</label>
+                <div class="reporttypes">
+                    <select name="reportsType">
+                        <option value="Daily">FullDay</option>
+                        <option value="Monthly">Monthly</option>
+                        <option value="Realtime">Realtime</option>
+                    </select>
+                </div>
+
                 <div id="inputCredentials">
                     <label for="credentials">Choose the credentials from the server</label>
                     <select name="credentials" id="credentials">
@@ -87,20 +95,15 @@
             <script>
                 document.getElementById('addButton').addEventListener('click', function () {
                     const container = document.getElementById('inputContainer');
-
-                    // Create new input for list item
                     const listInput = document.createElement('input');
                     listInput.type = 'text';
                     listInput.placeholder = 'Enter country list';
                     listInput.name = 'countryList';
 
-                    // Create new input for string input
                     const stringInput = document.createElement('input');
                     stringInput.type = 'text';
                     stringInput.placeholder = 'Enter raw cookies';
                     stringInput.name = 'cookiesString';
-
-                    // Add the inputs to the container
                     container.appendChild(listInput);
                     container.appendChild(stringInput);
                 });
@@ -122,6 +125,26 @@
                         setTimeout(() => {
                             container.removeChild(message);
                         }, 3000);
+                    }
+                })
+            </script>
+
+            <script>
+                const googleDiv = document.getElementById('inputCredentials')
+                const selectElement = googleDiv.querySelector('select')
+                document.getElementsById('inputForm').addEventListener('submit', function () {
+                    const optionValue = selectElement.value
+                    const existingMessage = googleDiv.querySelector('p');
+                    if (existingMessage) {
+                        googleDiv.removeChild(existingMessage);
+                    }
+                    if (!optionValue) {
+                        event.preventDefault(); 
+                        const message = 'Please select your credentials';
+                        const pMessage = document.createElement('p');
+                        pMessage.textContent = message;
+                        pMessage.style.color = 'red'; 
+                        googleDiv.appendChild(pMessage);
                     }
                 })
             </script>

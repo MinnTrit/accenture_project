@@ -1,3 +1,4 @@
+
 from flask import request, jsonify, render_template, session, redirect, url_for
 import os
 from redbeat import RedBeatSchedulerEntry
@@ -16,6 +17,7 @@ def index():
         if not os.path.exists(upload_folder):
             os.makedirs(upload_folder)
         result_countries_list = []
+        reports_type = request.form.get('reportsType')
         google_credential_name = request.form.get('credentials')
         google_credential_path = os.path.join(credentials_folder, google_credential_name)
         input_countries_list = request.form.getlist('countryList')
@@ -49,7 +51,8 @@ def index():
             product_spreadsheet=product_spreadsheet,
             voucher_spreadsheet=voucher_spreadsheet,
             product_tab=product_tab,
-            voucher_tab=voucher_tab
+            voucher_tab=voucher_tab,
+            reports_type=reports_type
             )
         task_id = task.id
         entry = RedBeatSchedulerEntry(
@@ -63,7 +66,8 @@ def index():
                 "product_spreadsheet": product_spreadsheet,
                 "voucher_spreadsheet": voucher_spreadsheet,
                 "product_tab": product_tab,
-                "voucher_tab": voucher_tab
+                "voucher_tab": voucher_tab,
+                'reports_type': reports_type
             },
             app=celery
         )
