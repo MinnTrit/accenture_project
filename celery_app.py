@@ -6,6 +6,7 @@ from datetime import datetime, timedelta
 from tasks import main_task, app, celery
 import json
 import redis
+import pytz
 #Initialize common variables
 upload_folder = app.config['UPLOAD_FOLDER']
 credentials_folder = app.config['CREDENTIAL_FOLDER']
@@ -74,8 +75,15 @@ def index():
                 app=celery
             )
             entry.save()
+        else:
+            r.set(f'custom-{task_id}',json.dumps({
+            "launcher": launcher, 
+            "reportsType": reports_type,
+            "countriesList": result_countries_list
+            }))
         task_response = {
             'status_code': 200,
+            'task_id': task_id, 
             'task_time': current_time,
             'country_list': result_countries_list,
             'raw_cookies': input_raw_cookies
@@ -93,6 +101,12 @@ def delete_task():
         scheduled_tasks = r.zrange(redbeat_group, 0, -1, withscores=True)
         accenture_keys = r.keys(f'{redis_metadata}*')
         normal_tasks = [json.loads(r.get(accenture_key).decode('utf-8')) for accenture_key in accenture_keys]
+        for task in normal_tasks: 
+            task_id = task['task_id']
+            custom_metadata = r.get(f'custom-{task_id}')
+            if custom_metadata:  
+                task.update(json.loads(custom_metadata.decode('utf-8')))
+        normal_tasks.sort(key=lambda task: datetime.fromisoformat(task['date_done']), reverse=True)
         return render_template('current_tasks.html', scheduled_tasks=scheduled_tasks, normal_tasks=normal_tasks)
     else: 
         task_id = request.form.get('deleteTask')
@@ -111,6 +125,7 @@ def delete_task():
         else:
             try:
                 r.delete(f'celery-task-meta-{task_id}')
+                r.delete(f'custom-{task_id}')
                 response = {
                     'status_code': 200,
                     'message': 'success'
@@ -169,6 +184,14 @@ def delete_credentials():
             'status_code': 400
         }
     return jsonify(task_response)
+
+@app.template_filter('togmt7')
+def convert_to_gmt7(time_string):
+    utc_time = datetime.fromisoformat(time_string)
+    gmt7 = pytz.timezone('Asia/Ho_Chi_Minh')  # GMT+7
+    utc_time = utc_time.replace(tzinfo=pytz.utc) 
+    gmt7_time = utc_time.astimezone(gmt7)
+    return gmt7_time.strftime('%Y-%m-%d %H:%M:%S')
 
 @app.template_filter('datetimeformat')
 def datetimeformat(value):

@@ -49,7 +49,10 @@
             <tr>
                 <th>#</th>
                 <th>Redis task id</th>
+                <th>Launcher</th>
+                <th>Countries list</th>
                 <th>Latest task status</th>
+                <th>Tasks' finished time</th>
                 <th>Error trace back</th>
                 <th>Delete tasks</th>
             </tr>
@@ -59,7 +62,10 @@
             <tr>
                 <td>{{ loop.index }}</td>
                 <td>{{ normal_task['task_id'] }}</td>
+                <td>{{ normal_task['launcher'] }}</td>
+                <td>{{ normal_task['countriesList'] }}</td>
                 <td>{{ normal_task['status']}}</td>
+                <td>{{ normal_task['date_done'] | togmt7 }}</td>
                 {% if normal_task['status'] == 'FAILURE' %}
                     <td>{{ normal_task['traceback'] }}</td>
                 {% else %}
