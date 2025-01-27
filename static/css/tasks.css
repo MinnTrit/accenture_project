@@ -1,11 +1,17 @@
-/* General styling */
+.tableCaption {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    display: block; /* Change from flex to block for top alignment */
-    padding-top: 20px; /* Add some space at the top */
+    display: block; 
+    padding-top: 20px; 
 }
 
 h1 {
