@@ -19,16 +19,17 @@
             </div>
 
             <h2>Input parrameters</h2>
+            <!--Divs to get the data from the users-->
             <form id="inputForm" method="POST">
                 <label for="reportsType">Choose the reports type</label>
-                <div class="reporttypes">
+                <div id="reportsType" class="reportsType">
                     <select name="reportsType">
                         <option value="FullDay">FullDay</option>
                         <option value="Monthly">Monthly</option>
                         <option value="Realtime">Realtime</option>
                     </select>
                 </div>
-
+                
                 <div id="inputCredentials">
                     <label for="credentials">Choose the credentials from the server</label>
                     <select name="credentials" id="credentials">
@@ -94,6 +95,28 @@
                 <button type="button" id="removeButton">Remove inputs</button>
 
             </form>
+
+            <script>
+                document.getElementById('inputForm').addEventListener('submit', function(event){
+                    event.preventDefault();
+                    const submittedCredentials = document.getElementById('credentials').value
+                    if (submittedCredentials === "") {
+                        const inputDiv = document.getElementById('inputCredentials');
+                        const message = document.createElement('p');
+                        message.id = 'errorMessage';
+                        message.style.color = 'red';
+                        message.textContent = 'Please select the credentials from the server';
+                        inputDiv.appendChild(message);
+                        setTimeout(() => {
+                            inputDiv.removeChild(message);
+                        }, 3000);
+                        inputDiv.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'center'
+                        })
+                    }
+                });
+            </script>
 
             <script>
                 document.getElementById('timeInterval').addEventListener('change', function(){
