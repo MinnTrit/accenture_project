@@ -23,7 +23,7 @@
                 <label for="reportsType">Choose the reports type</label>
                 <div class="reporttypes">
                     <select name="reportsType">
-                        <option value="Daily">FullDay</option>
+                        <option value="FullDay">FullDay</option>
                         <option value="Monthly">Monthly</option>
                         <option value="Realtime">Realtime</option>
                     </select>
@@ -72,12 +72,15 @@
                         <option value="10">10</option>
                         <option value="30">30</option>
                         <option value="60">60</option>
+                        <option value="None">None</option>
                     </select>
+
                     <label for="timeQuantifier">Select the time interval quantifier</label>
                     <select name="timeQuantifier" id="timeQuantifier">
                         <option value="Seconds">Seconds</option>
                         <option value="Minutes">Minutes</option>
                         <option value="Hours">Hours</option>
+                        <option value="None">None</option>
                     </select>
                 </div>
 
@@ -91,6 +94,38 @@
                 <button type="button" id="removeButton">Remove inputs</button>
 
             </form>
+
+            <script>
+                document.getElementById('timeInterval').addEventListener('change', function(){
+                    const selectTime = document.getElementById('timeInterval');
+                    const timeOptionValue = selectTime.value;
+                    if (timeOptionValue === 'None'){
+                        const selectQuantifier = document.getElementById('timeQuantifier')
+                        selectQuantifier.value = 'None';
+                        selectQuantifier.disabled = true;
+                    }
+                    else {
+                        const selectQuantifier = document.getElementById('timeQuantifier')
+                        selectQuantifier.disabled = false;
+                    }
+                });
+            </script>
+
+            <script>
+                document.getElementById('timeQuantifier').addEventListener('change', function(){
+                    const selectQuantifier = document.getElementById('timeQuantifier');
+                    const quantifierOptionValue = selectQuantifier.value;
+                    if (quantifierOptionValue === 'None') {
+                        const selectTime = document.getElementById('timeInterval');
+                        selectTime.value = 'None';
+                        selectTime.disabled = true;
+                    }
+                    else {
+                        const selectTime = document.getElementById('timeInterval');
+                        selectTime.disabled = false; 
+                    }
+                });
+            </script>
 
             <script>
                 document.getElementById('addButton').addEventListener('click', function () {
@@ -114,8 +149,10 @@
                     const container = document.getElementById("inputContainer")
                     const inputs = container.getElementsByTagName("input")
                     if (inputs.length > 2) {
-                        container.removeChild(inputs[inputs.length - 1])
-                        container.removeChild(inputs[inputs.length - 2])
+                        const lastElement = inputs[inputs.length - 1]
+                        const secondLastElement = inputs[inputs.length - 2]
+                        container.removeChild(lastElement)
+                        container.removeChild(secondLastElement)
                     }
                     else {
                         let message = document.createElement("p")

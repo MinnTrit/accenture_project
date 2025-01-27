@@ -6,7 +6,8 @@
     <title>Currents scheduled tasks</title>
 </head>
 <body>
-    <table>
+    <label for="scheduledTable">List of scheduled tasks</label>
+    <table class="scheduledTable">
         <thead>
             <tr>
                 <th>#</th>
@@ -20,31 +21,64 @@
             </tr>
         </thead>
         <tbody>
-            {% for key in keys %}
+            {% for scheduled_task in scheduled_tasks %}
             <tr>
                 <td>{{ loop.index }}</td>
-                <td>{{ key[0].decode('utf-8').split('@')[0] }}</td>
-                <td>{{ key[0].decode('utf-8').split('@')[1] }}</td>
-                <td>{{ key[0].decode('utf-8').split('@')[3] }}</td>
-                <td>{{ key[0].decode('utf-8').split('@')[2].split('-')[0] }}</td>
-                <td>{{ key[0].decode('utf-8').split('@')[2].split('-')[1] }}</td>
+                <td>{{ scheduled_task[0].decode('utf-8').split('@')[0] }}</td>
+                <td>{{ scheduled_task[0].decode('utf-8').split('@')[1] }}</td>
+                <td>{{ scheduled_task[0].decode('utf-8').split('@')[3] }}</td>
+                <td>{{ scheduled_task[0].decode('utf-8').split('@')[2].split('-')[0] }}</td>
+                <td>{{ scheduled_task[0].decode('utf-8').split('@')[2].split('-')[1] }}</td>
                 <!-- Get the latest task status -->
-                <td>{{ key[0].decode('utf-8').split('@')[0].split('redbeat:laz-task-')[1] | taskstatus}}</td>
-                <td>{{ key[1] | int | datetimeformat }}</td> 
+                <td>{{ scheduled_task[0].decode('utf-8').split('@')[0].split('redbeat:laz-task-')[1] | taskstatus}}</td>
+                <td>{{ scheduled_task[1] | int | datetimeformat }}</td> 
                 <td>
                     <form method="POST">
-                        <button type="submit" value="{{ key[0].decode('utf-8') }}"
+                        <button type="submit" value="{{ scheduled_task[0].decode('utf-8') }}"
                         name="deleteTask">Delete task</button>
                     </form>
                 </td>
             </tr>
             {% endfor %}
-            <div>
-                <form method="GET" action="{{ url_for('index') }}">
-                    <button type="submit">Back to home page</button>
-                </form>
-            </div>
         </tbody>
     </table>
+
+    <label for="normalTasks">List of normal tasks (Tasks without scheduler)</label>
+    <table class="normalTasks">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Redis task id</th>
+                <th>Latest task status</th>
+                <th>Error trace back</th>
+                <th>Delete tasks</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for normal_task in normal_tasks %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ normal_task['task_id'] }}</td>
+                <td>{{ normal_task['status']}}</td>
+                {% if normal_task['status'] == 'FAILURE' %}
+                    <td>{{ normal_task['traceback'] }}</td>
+                {% else %}
+                    <td>None</td>
+                {% endif %}
+                <td>
+                    <form method="POST">
+                        <button type="submit" value="{{ normal_task['task_id'] }}"
+                        name="deleteTask">Delete task</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div>
+        <form method="GET" action="{{ url_for('index') }}">
+            <button type="submit">Back to home page</button>
+        </form>
+    </div>
 </body>
 </html>

@@ -49,7 +49,6 @@ def main_task(
             datalake_client=datalake_client,
             google_client=google_client
         )
-
         processor.get_all_data(reports_type)
     else:
         print('Failed initializing the Google Client')

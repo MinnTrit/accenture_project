@@ -18,6 +18,7 @@ def index():
             os.makedirs(upload_folder)
         result_countries_list = []
         reports_type = request.form.get('reportsType')
+        print(reports_type)
         google_credential_name = request.form.get('credentials')
         google_credential_path = os.path.join(credentials_folder, google_credential_name)
         input_countries_list = request.form.getlist('countryList')
@@ -37,13 +38,6 @@ def index():
             "country_list": result_countries_list,
             "cookies_list": input_raw_cookies
         }
-        current_time = datetime.now()
-        if input_time_quantifier == "Hours":
-            interval = timedelta(hours=int(input_interval))
-        elif input_time_quantifier == "Minutes":
-            interval = timedelta(minutes=int(input_interval))
-        else:
-            interval = timedelta(seconds=int(input_interval))
         task = main_task.delay(
             google_credential_path=google_credential_path,
             jobs_details=jobs_details, 
@@ -55,23 +49,31 @@ def index():
             reports_type=reports_type
             )
         task_id = task.id
-        entry = RedBeatSchedulerEntry(
-            f'laz-task-{task_id}@{launcher}@{input_interval}-{input_time_quantifier}@{result_countries_list}',
-            'tasks.main_task',
-            interval,
-            kwargs={
-                "google_credential_path": google_credential_path,
-                "jobs_details":jobs_details,
-                "cleaning_option": cleaning_option,
-                "product_spreadsheet": product_spreadsheet,
-                "voucher_spreadsheet": voucher_spreadsheet,
-                "product_tab": product_tab,
-                "voucher_tab": voucher_tab,
-                'reports_type': reports_type
-            },
-            app=celery
-        )
-        entry.save()
+        current_time = datetime.now()
+        if (input_time_quantifier != 'None') and (input_interval != 'None'):
+            if input_time_quantifier == "Hours":
+                interval = timedelta(hours=int(input_interval))
+            elif input_time_quantifier == "Minutes":
+                interval = timedelta(minutes=int(input_interval))
+            else:
+                interval = timedelta(seconds=int(input_interval))
+            entry = RedBeatSchedulerEntry(
+                f'laz-task-{task_id}@{launcher}@{input_interval}-{input_time_quantifier}@{result_countries_list}',
+                'tasks.main_task',
+                interval,
+                kwargs={
+                    "google_credential_path": google_credential_path,
+                    "jobs_details":jobs_details,
+                    "cleaning_option": cleaning_option,
+                    "product_spreadsheet": product_spreadsheet,
+                    "voucher_spreadsheet": voucher_spreadsheet,
+                    "product_tab": product_tab,
+                    "voucher_tab": voucher_tab,
+                    'reports_type': reports_type
+                },
+                app=celery
+            )
+            entry.save()
         task_response = {
             'status_code': 200,
             'task_time': current_time,
@@ -86,22 +88,38 @@ def index():
 @app.route('/delete', methods=['GET', 'POST'])
 def delete_task():
     redbeat_group = 'redbeat::schedule'
+    redis_metadata = 'celery-task-meta'
     if request.method == 'GET':
-        elements = r.zrange(redbeat_group, 0, -1, withscores=True)
-        return render_template('current_tasks.html', keys=elements)
+        scheduled_tasks = r.zrange(redbeat_group, 0, -1, withscores=True)
+        accenture_keys = r.keys(f'{redis_metadata}*')
+        normal_tasks = [json.loads(r.get(accenture_key).decode('utf-8')) for accenture_key in accenture_keys]
+        return render_template('current_tasks.html', scheduled_tasks=scheduled_tasks, normal_tasks=normal_tasks)
     else: 
         task_id = request.form.get('deleteTask')
-        try: 
-            r.zrem(redbeat_group, task_id)
-            response = {
-                'status_code': 200,
-                'message': 'success'
-            }
-        except Exception as e:
-            response = {
-                'status_code': 400,
-                'message': e
-            }
+        if 'redbeat' in task_id:
+            try: 
+                r.zrem(redbeat_group, task_id)
+                response = {
+                    'status_code': 200,
+                    'message': 'success'
+                }
+            except Exception as e:
+                response = {
+                    'status_code': 400,
+                    'message': e
+                }
+        else:
+            try:
+                r.delete(f'celery-task-meta-{task_id}')
+                response = {
+                    'status_code': 200,
+                    'message': 'success'
+                }
+            except Exception as e:
+                response = {
+                    'status_code': 400,
+                    'message': e
+                }
         return jsonify(response)
     
 @app.route('/credentials', methods=['GET','POST'])
@@ -151,7 +169,6 @@ def delete_credentials():
             'status_code': 400
         }
     return jsonify(task_response)
-
 
 @app.template_filter('datetimeformat')
 def datetimeformat(value):
