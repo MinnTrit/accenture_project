@@ -1,6 +1,5 @@
 from datetime import datetime, timedelta
-from concurrent.futures import ThreadPoolExecutor, as_completed
-from threading import Event
+from concurrent.futures import ThreadPoolExecutor
 import pandas as pd
 import requests
 import re
